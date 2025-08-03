@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - {{ weather.city }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="weather-bg-{{ weather.condition.lower() }}">
+    <div class="container">
+        <div class="weather-result">
+            <div class="weather-header">
+                <h1>🌤️ Weather App</h1>
+                <a href="{{ url_for('index') }}" class="back-btn">← Search Another City</a>
+            </div>
+            
+            <div class="weather-card weather-display">
+                <div class="city-info">
+                    <h2>{{ weather.city }}, {{ weather.country }}</h2>
+                    <p class="weather-description">{{ weather.description }}</p>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span class="temp-value">{{ weather.temperature }}°</span>
+                        <span class="temp-unit">Celsius</span>
+                    </div>
+                    <div class="weather-icon">
+                        <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" 
+                             alt="{{ weather.description }}">
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="detail-label">💨 Wind Speed</div>
+                        <div class="detail-value">{{ weather.wind_speed }} m/s</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">💧 Humidity</div>
+                        <div class="detail-value">{{ weather.humidity }}%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">🌤️ Condition</div>
+                        <div class="detail-value">{{ weather.condition }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

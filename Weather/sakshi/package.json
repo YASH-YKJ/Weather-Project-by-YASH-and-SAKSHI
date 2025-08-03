@@ -1,0 +1,31 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A beautiful weather application built with Flask and OpenWeatherMap API",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py",
+    "dev": "python app.py",
+    "build": "echo 'No build step required for Flask app'"
+  },
+  "keywords": [
+    "weather",
+    "flask",
+    "python",
+    "api",
+    "openweathermap"
+  ],
+  "author": "Weather App Developer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/weather-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/weather-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/weather-app#readme"
+}
